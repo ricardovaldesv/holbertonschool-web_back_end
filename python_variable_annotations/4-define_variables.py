@@ -6,14 +6,7 @@
     - school, a string with a value of “Holberton”
 """
 
-
-a = 1
-pi = 3.14
-i_understand_annotations = True
-school = "Holberton"
-
-
-int(a)
-float(pi)
-bool(i_understand_annotations)
-str(school)
+a: int = 1
+pi: float = 3.14
+i_understand_annotations: bool = True
+school: str = "Holberton"
