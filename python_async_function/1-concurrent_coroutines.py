@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import asyncio
+import random  # Import the random module
 from typing import List
 
 async def wait_random(max_delay=10):
