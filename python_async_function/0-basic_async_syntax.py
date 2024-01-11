@@ -18,7 +18,7 @@ async def main() -> None:
     """
     Asynchronous coroutine that calls wait_random.
     """
-    result: float = await wait_random()
+    result: int = await wait_random()
 
 
 if __name__ == "__main__":
