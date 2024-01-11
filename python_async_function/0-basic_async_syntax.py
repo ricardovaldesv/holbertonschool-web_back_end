@@ -7,18 +7,18 @@ import asyncio
 import random
 
 
-async def wait_random(max_delay=10):
+async def wait_random(max_delay: float = 10) -> float:
     """Generate a random delay using random.uniform(0, max_delay)"""
-    delay = random.uniform(0, max_delay)
+    delay: float = random.uniform(0, max_delay)
     await asyncio.sleep(delay)
     return delay
 
 
-async def main():
+async def main() -> None:
     """
     Asynchronous coroutine that calls wait_random.
     """
-    result = await wait_random()
+    result: float = await wait_random()
 
 
 if __name__ == "__main__":
