@@ -12,8 +12,7 @@ from typing import Any
 module = importlib.import_module('0-basic_async_syntax')
 wait_random = module.wait_random
 
-
-def task_wait_random(max_delay: int) -> Any:
+def task_wait_random(max_delay: int) -> asyncio.Task:
     """
     Create an asyncio.Task for the wait_random coroutine.
 
@@ -24,7 +23,6 @@ def task_wait_random(max_delay: int) -> Any:
     - asyncio.Task: Task representing the execution of wait_random.
     """
     return asyncio.ensure_future(wait_random(max_delay))
-
 
 if __name__ == "__main__":
     asyncio.run()
