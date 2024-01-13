@@ -2,5 +2,6 @@
 // The document must have one attribute name with value “Holberton school”
 // The database name will be passed as option of mongo command
 
-database_name=$1
-"$database_name" --eval 'db.school.insert({ "name": "Holberton school" })'
+database_name=$2
+use "$database_name"
+db.school.insert({ "name": "Holberton school" })
