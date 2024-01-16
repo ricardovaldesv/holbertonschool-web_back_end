@@ -11,6 +11,7 @@ from typing import List
 module = importlib.import_module('0-basic_async_syntax')
 wait_random = module.wait_random
 
+
 async def task_wait_random(max_delay: int) -> float:
     """
     Asynchronous coroutine that creates an asyncio.Task for wait_random.
@@ -24,6 +25,7 @@ async def task_wait_random(max_delay: int) -> float:
     task = asyncio.ensure_future(wait_random(max_delay))
     await task
     return task.result()
+
 
 async def task_wait_n(n: int, max_delay: int) -> List[float]:
     """
