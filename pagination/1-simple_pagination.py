@@ -30,6 +30,20 @@ class Server:
         return self.__dataset
 
     def get_page(self, page: int = 1, page_size: int = 10) -> List[List]:
+        """
+        Retrieve a specific page of data from the database.
+
+        Args:
+            page (int): The page number to retrieve. Defaults to 1.
+            page_size (int): The number of items per page. Defaults to 10.
+
+        Returns:
+            List[List]: A list containing the data for the specified page.
+
+        Raises:
+            AssertionError: If page or page_size are not positive integers.
+        """
+
         assert isinstance(page, int) and page > 0
         assert isinstance(page_size, int) and page_size > 0
         index_r = self.index_range(page, page_size)
