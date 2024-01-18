@@ -79,7 +79,7 @@ class Server:
         dic['page_size'] = page_size
         dic['page'] = page
         dic['data'] = list_data
-        if page == 0 or page == 1 or page == int(len(self.dataset())):
+        if page == 0 or page == 1 or page == int(len(self.dataset()))/ page_size:
             dic['next_page'] = None
         else:
             dic['next_page'] = page + 1
