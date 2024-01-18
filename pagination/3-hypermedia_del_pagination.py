@@ -58,7 +58,7 @@ class Server:
         assert isinstance(page_size, int) and page_size > 0
         index_r = self.index_range(page, page_size)
         return self.dataset()[index_r[0]:index_r[1]]
-    
+
     def index_range(self, page: int, page_size: int) -> tuple:
         """
         Function that return a tuple with range index
@@ -70,7 +70,7 @@ class Server:
         end_index = page * page_size
         index_r = (start_index, end_index)
         return index_r
-    
+
     def get_hyper_index(self, index: int = None, page_size: int = 10) -> Dict:
         '''method with two integer arguments:
         index with a None default value and page_size
