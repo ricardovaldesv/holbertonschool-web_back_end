@@ -39,38 +39,6 @@ class Server:
             }
         return self.__indexed_dataset
 
-    def get_page(self, page: int = 1, page_size: int = 10) -> List[List]:
-        """
-        Retrieve a specific page of data from the database.
-
-        Args:
-            page (int): The page number to retrieve. Defaults to 1.
-            page_size (int): The number of items per page. Defaults to 10.
-
-        Returns:
-            List[List]: A list containing the data for the specified page.
-
-        Raises:
-            AssertionError: If page or page_size are not positive integers.
-        """
-
-        assert isinstance(page, int) and page > 0
-        assert isinstance(page_size, int) and page_size > 0
-        index_r = self.index_range(page, page_size)
-        return self.dataset()[index_r[0]:index_r[1]]
-
-    def index_range(self, page: int, page_size: int) -> tuple:
-        """
-        Function that return a tuple with range index
-        """
-        assert isinstance(page, int) and page > 0
-        assert isinstance(page_size, int) and page_size > 0
-
-        start_index = (page - 1) * page_size
-        end_index = page * page_size
-        index_r = (start_index, end_index)
-        return index_r
-
     def get_hyper_index(self, index: int = None, page_size: int = 10) -> Dict:
         '''method with two integer arguments:
         index with a None default value and page_size
