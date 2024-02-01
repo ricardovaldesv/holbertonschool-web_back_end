@@ -1,6 +1,6 @@
 export default function updateUniqueItems(miMapa) {
   if (!(miMapa instanceof Map)) {
-    throw new Error('Position outside range: Cannot process');
+    throw new Error('Cannot process');
   }
   miMapa.forEach((valor, clave) => {
     if (valor === 1) {
